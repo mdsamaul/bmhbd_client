@@ -73,7 +73,7 @@ const Form = ({ onSubmit }) => {
                 </label>
                 {/* errors will return when field validation fails  */}
                 {errors.exampleRequired && <span>This field is required</span>}
-                <Button onClick={handlerHello()} btnText={'Sign In'}><input className='btn' type="submit" /></Button>
+                <Button btnText={'Sign In'}><input className='btn' type="submit" /></Button>
 
             </form>
         </div>

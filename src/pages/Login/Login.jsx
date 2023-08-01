@@ -8,7 +8,7 @@ const Login = () => {
 
 
     const onSubmit = (data) => {
-        console.log('samaul');
+
         console.log(data)
     }
 

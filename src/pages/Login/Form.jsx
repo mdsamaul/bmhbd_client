@@ -15,13 +15,15 @@ const Form = ({ onSubmit }) => {
     const handleEye = useCallback(() => {
         setEyePassOpen(value => !value);
     }, []);
-    console.log(eyePassOpen);
+
     const {
         register,
         handleSubmit,
         watch,
         formState: { errors },
     } = useForm();
+
+
     return (
         <div className='p-5'>
             <form onSubmit={handleSubmit(onSubmit)}>
@@ -71,11 +73,10 @@ const Form = ({ onSubmit }) => {
                 </label>
                 {/* errors will return when field validation fails  */}
                 {errors.exampleRequired && <span>This field is required</span>}
+                <Button onClick={handlerHello()} btnText={'Sign In'}><input className='btn' type="submit" /></Button>
 
-                <Button btnText={'Sign In'}><input className='btn' type="submit" /></Button>
             </form>
-
-        </div >
+        </div>
     );
 };
 

@@ -26,7 +26,7 @@ const Registration = () => {
         <div className='my-14 relative h-[100vh]'>
             <div className='fixed transition duration-500 bg-red-600  top-0 left-0  right-0'>
                 <Link to='/login'>
-                    <div className='flex mt-7 items-center w-full bg-red-600 text-base font-medium  pb-2 text-white text-start gap-4 pl-1'>
+                    <div className='flex mt-8 items-center w-full bg-red-600 text-base font-medium  pb-2 text-white text-start gap-4 pl-1'>
                     <AiOutlineArrowLeft />
                     <button>Donor Registration</button>
                 </div>

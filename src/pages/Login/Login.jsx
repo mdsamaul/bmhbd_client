@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import ImageType from '../../components/ImageType/ImageType.jsx';
 import Form from './Form.jsx';
-import LoginLogo from './LoginLogo.jsx';
 import TearmsAndCondition from './TearmsAndCondition.jsx';
 
 const Login = () => {
@@ -20,7 +20,8 @@ const Login = () => {
 
         <div>
             <div>
-                <LoginLogo />
+                {/* <LoginLogo /> */}
+                <ImageType imgSrc={'https://i.ibb.co/Mh4nvDY/logo-bmhbd.png'}></ImageType>
             </div>
             <div>
                 <Form onSubmit={onSubmit} />

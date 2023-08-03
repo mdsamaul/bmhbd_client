@@ -38,32 +38,32 @@ const Form = ({ onSubmit }) => {
                         onChange={handleInputChange} id="published" className="peer/published" type="radio" name="status" />
                     <label htmlFor="published" className="peer-checked/published:text-sky-500 pl-1 font-mono">Phone</label>
 
-                    <div className="hidden peer-checked/draft:block">
+                    <div className="hidden peer-checked/draft:block pt-2">
                         {/*  */}
-                        <div className='flex items-center gap-3 pt-2'>
+                        <div className='flex items-center gap-3 py-3'>
                             <div>
                                 <HiOutlineMail className='text-red-600 text-lg' />
                             </div>
 
-                            <input type='email' className='w-full appearance-none bg-transparent border-b  text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none' placeholder='Email' {...register("email", { required: false })} /></div>
+                            <input type='email' className='w-full appearance-none bg-transparent border-b  text-gray-700 mr-3 py-2 px-2 leading-tight focus:outline-none' placeholder='Email' {...register("email", { required: false })} /></div>
                     </div>
 
                     <div className="hidden peer-checked/published:block pt-2">
-                        <div div className='flex items-center gap-3 w-full'>
+                        <div div className='flex items-center py-3  gap-3 w-full'>
                             <div>
                                 <IoMdCall className='text-red-600 text-lg' />
                             </div>
-                            <input className='w-full appearance-none bg-transparent border-b  text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none' placeholder='Phone Number' {...register("Phone_number", { required: false })} />
+                            <input className='w-full appearance-none bg-transparent border-b  text-gray-700 mr-3 py-2 px-2 leading-tight focus:outline-none' placeholder='Phone Number' {...register("Phone_number", { required: false })} />
                         </div>
                     </div>
                 </fieldset>
 
 
                 {/* include validation with required or other standard HTML validation rules */}
-                <label className='flex items-center gap-3 my-2'>
+                <label className='flex items-center gap-3 my-3'>
                     <AiFillLock className='text-red-600 text-xl' />
                     <div className='relative w-full pr-3'>
-                        <input type={`${eyePassOpen ? "text" : "password"}`} className='w-full appearance-none bg-transparent border-b  text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none' placeholder='Password' {...register("password", { required: true })} />
+                        <input type={`${eyePassOpen ? "text" : "password"}`} className='w-full appearance-none bg-transparent border-b  text-gray-700 mr-3 py-2 px-2 leading-tight focus:outline-none' placeholder='Password' {...register("password", { required: true })} />
                         {
                             eyePassOpen ? <span onClick={() => handleEye()} className='absolute top-2 right-5 cursor-pointer'><FaEyeSlash /></span> : <span onClick={() => handleEye()} className='absolute top-2 right-5'><FaRegEye /></span>
                         }
@@ -73,7 +73,7 @@ const Form = ({ onSubmit }) => {
                 </label>
                 {/* errors will return when field validation fails  */}
                 {errors.exampleRequired && <span>This field is required</span>}
-                <Button btnText={'Sign In'}><input className='btn' type="submit" /></Button>
+                <Button rounded={"rounded"} btnText={'Sign In'}><input className='btn' type="submit" /></Button>
 
             </form>
         </div>

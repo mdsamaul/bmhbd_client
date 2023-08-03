@@ -29,10 +29,8 @@ const Registration = () => {
 
     return (
 
-        <div className='my-20 relative h-[100vh]'>
+        <div className='py-20 relative h-[100vh]'>
             <div>
-                {/* <input type="file" src="https://i.ibb.co/QFWQc9p/user-Profile.png" alt="" /> */}
-                {/* <input type="file" name="" id="" /> */}
                 <UploadedImage handleFileChange={handleFileChange} selectedFile={selectedFile}></UploadedImage>
             </div>
             <div className='fixed transition duration-500 bg-red-600  top-0 left-0  right-0'>

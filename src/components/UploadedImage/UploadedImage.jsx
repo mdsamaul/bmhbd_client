@@ -2,7 +2,7 @@ import React from 'react';
 
 const UploadedImage = ({ selectedFile, handleFileChange }) => {
     return (
-        <div className='w-full p-20 flex justify-center items-center h-[23vh] text-center mb-5'>
+        <div className='w-full p-20 pt-1 flex justify-center items-center  text-center pb-5'>
             <div className='file_upload'>
                 <div className='flex flex-col  text-center'>
                     <label>

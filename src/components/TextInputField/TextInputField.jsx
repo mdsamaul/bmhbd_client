@@ -1,7 +1,7 @@
 import React from 'react';
 
 const TextInputField = ({ label,name, register, hints, registerName, require = true, type, }) => {
-    console.log(require);
+    // console.log(require);
 
     return (
         <div>

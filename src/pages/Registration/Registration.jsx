@@ -7,6 +7,7 @@ import TextInputField from "../../components/TextInputField/TextInputField.jsx";
 import UploadedImage from "../../components/UploadedImage/UploadedImage.jsx";
 import { FcManager } from "react-icons/fc";
 import SelectBlood from "../../components/SelectBlood/SelectBlood.jsx";
+import RadioField from "../../components/RadioField/RadioField.jsx";
 
 const Registration = () => {
   const [selectedFile, setSelectedFile] = useState(
@@ -88,7 +89,15 @@ const Registration = () => {
             <SelectBlood
               register={register}
               registerName={"bloodGroup"}
+              label={"Select Blood Group"}
             ></SelectBlood>
+          </div>
+          <div className="py-2">
+            <RadioField
+              label={"Gender"}
+              registerName={"gender"}
+              register={register}
+            ></RadioField>
           </div>
 
           {/* <input defaultValue="test" {...register("example")} /> */}
@@ -105,8 +114,6 @@ const Registration = () => {
           {/* <input type="submit" /> */}
         </form>
       </div>
-
-      <div className="py-20">{/* <RadioField></RadioField> */}</div>
     </div>
   );
 };

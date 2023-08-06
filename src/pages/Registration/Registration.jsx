@@ -8,6 +8,7 @@ import UploadedImage from "../../components/UploadedImage/UploadedImage.jsx";
 import { FcManager } from "react-icons/fc";
 import SelectBlood from "../../components/SelectBlood/SelectBlood.jsx";
 import RadioField from "../../components/RadioField/RadioField.jsx";
+import Profation from "../../components/RadioField/Profation.jsx";
 
 const Registration = () => {
   const [selectedFile, setSelectedFile] = useState(
@@ -98,6 +99,68 @@ const Registration = () => {
               registerName={"gender"}
               register={register}
             ></RadioField>
+          </div>
+          <TextInputField
+            type={"text"}
+            hints={"NID Number"}
+            register={register}
+            registerName={"nidNumber"}
+            label={"NID Number"}
+          ></TextInputField>
+          <div className="py-2">
+            <TextInputField
+              type={"text"}
+              hints={"Select District"}
+              register={register}
+              registerName={"selectDistrict"}
+              label={"Select District"}
+            ></TextInputField>
+          </div>
+          <TextInputField
+            type={"text"}
+            hints={"Select Upozila"}
+            register={register}
+            registerName={"selectUpozila"}
+            label={"Select Upozila"}
+          ></TextInputField>
+          <div className="py-2">
+            <TextInputField
+              type={"text"}
+              hints={"Select Union"}
+              register={register}
+              registerName={"selectUnion"}
+              label={"Select Union"}
+            ></TextInputField>
+          </div>
+          <TextInputField
+            type={"text"}
+            hints={"Write Address"}
+            register={register}
+            registerName={"writeAddress"}
+            label={"Write Address"}
+          ></TextInputField>
+          <div className="py-2">
+            <Profation
+              label={"Profession"}
+              registerName={"profession"}
+              register={register}
+            ></Profation>
+          </div>
+          <TextInputField
+            type={"text"}
+            hints={"Search Institution"}
+            register={register}
+            registerName={"institutionName"}
+            label={"Institution Name"}
+          ></TextInputField>
+          <div className="pt-2 pb-4">
+            <TextInputField
+              type={"text"}
+              hints={"Last Blood Donate date"}
+              register={register}
+              registerName={"lastDonateBlood"}
+              label={"Last Blood Donate"}
+            ></TextInputField>
           </div>
 
           {/* <input defaultValue="test" {...register("example")} /> */}

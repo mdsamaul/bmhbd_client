@@ -4,10 +4,26 @@ import ImageType from "../../components/ImageType/ImageType.jsx";
 import Form from "./Form.jsx";
 import TearmsAndCondition from "./TearmsAndCondition.jsx";
 import GoogleLogin from "../../components/Shared/GoogleLogin/GoogleLogin.jsx";
+import { useContext } from "react";
+import { AuthContext } from "../../providers/AuthProvider.jsx";
+import { toast } from "react-hot-toast";
 
 const Login = () => {
+  const { signIn, loading, setLoading } = useContext(AuthContext);
+
   const onSubmit = (data) => {
-    console.log(data);
+    console.log(data.email, data.password);
+    signIn(data.email, data.password)
+      .then((result) => {
+        setLoading(false);
+        toast.success("User Login successfully");
+        console.log(result);
+      })
+      .catch((err) => {
+        setLoading(false);
+        toast.error(err.message);
+        console.log(err.message);
+      });
   };
 
   // console.log(watch("example"))

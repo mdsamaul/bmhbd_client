@@ -3,6 +3,7 @@ import { useContext } from "react";
 import { FcGoogle } from "react-icons/fc";
 import { AuthContext } from "../../../providers/AuthProvider";
 import { Vortex } from "react-loader-spinner";
+import { toast } from "react-hot-toast";
 
 const GoogleLogin = () => {
   const { signInWithGoogle, loading, setLoading } = useContext(AuthContext);
@@ -11,12 +12,14 @@ const GoogleLogin = () => {
   const handlerSignInWithGoogle = () => {
     signInWithGoogle()
       .then((loggeduser) => {
+        toast.success("Login Successfully");
         console.log(loading);
         console.log(loggeduser);
       })
       .catch((err) => {
         setLoading(false);
         console.log("error", err.message);
+        toast.error(err.message);
       });
   };
   return (

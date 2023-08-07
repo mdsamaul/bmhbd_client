@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { useForm } from "react-hook-form";
 import { AiOutlineArrowLeft } from "react-icons/ai";
 import { Link } from "react-router-dom";
@@ -9,8 +9,11 @@ import { FcManager } from "react-icons/fc";
 import SelectBlood from "../../components/SelectBlood/SelectBlood.jsx";
 import RadioField from "../../components/RadioField/RadioField.jsx";
 import Profation from "../../components/RadioField/Profation.jsx";
+import { AuthContext } from "../../providers/AuthProvider.jsx";
+import { toast } from "react-hot-toast";
 
 const Registration = () => {
+  const { loading, setLoading, createUser } = useContext(AuthContext);
   const [selectedFile, setSelectedFile] = useState(
     "https://i.ibb.co/QFWQc9p/user-Profile.png"
   );
@@ -27,6 +30,16 @@ const Registration = () => {
 
   const onSubmit = (data) => {
     console.log(data);
+    console.log(data.userEmail, data.userPassword);
+    createUser(data.userEmail, data.userPassword)
+      .then((result) => {
+        toast.success("new user Created");
+        console.log(result);
+      })
+      .catch((err) => {
+        toast.error(err.message);
+        console.log(err.message);
+      });
   };
 
   // watch input value by passing the name of it

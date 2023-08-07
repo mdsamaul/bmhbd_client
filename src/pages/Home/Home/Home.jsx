@@ -1,11 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Button from "../../../components/Button/Button.jsx";
+import Loader from "../../../components/Loader/Loader.jsx";
 
 const Home = () => {
   return (
-    <div className="w-[100vw] bg-amber-400 h-[100vh] flex justify-center items-center">
+    <div className="">
       <div>this is home pages</div>
+      <Loader />
       <Link to="/login">
         <Button btnText={"Login"} />
       </Link>
